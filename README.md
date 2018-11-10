@@ -1,7 +1,7 @@
 # scrapy-dsl (aka sdsl)
 
 DSL to simplify write spiders. Propose this domain specific language is
-abstract python knowlogment and provide one  language more simple than python  to write spiders.
+abstract python and scrapy knowledgement and provide one language more simple to write spiders.
 
 ## DSL syntax proposal
     
