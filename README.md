@@ -1,5 +1,10 @@
 # scrapy-dsl (aka sdsl)
 
+Reading the book [Writing an interpreter in Go](https://interpreterbook.com/) i
+decided to build one very simple DSL to study and have fun :)
+
+## Proposal
+
 DSL to simplify write spiders. Propose this domain specific language is
 abstract python and scrapy knowledgement and provide one language more simple to write spiders.
 
