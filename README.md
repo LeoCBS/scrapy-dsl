@@ -28,5 +28,7 @@ Output Example:
 
 ## How install
 
-## How test
+## How run unit tests
+
+    make check
 
