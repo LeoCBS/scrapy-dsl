@@ -3,13 +3,14 @@ package lexer_test
 import (
 	"testing"
 
+	"github.com/LeoCBS/scrapy-dsl/lexer"
 	"github.com/LeoCBS/scrapy-dsl/token"
 )
 
-func TestNextToken(t *testing.T) {
+func TestNextTokenOnlyWithDelimiters(t *testing.T) {
 	input := "();"
 	tests := []struct {
-		expectedType    toke.TokenType
+		expectedType    token.TokenType
 		expectedLiteral string
 	}{
 		{token.LPAREN, "("},
@@ -17,17 +18,16 @@ func TestNextToken(t *testing.T) {
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
-	lexer = New(input)
-	for i, testCase := range tests {
+	l := lexer.New(input)
+	for i, ts := range tests {
 		tok := l.NextToken()
-		tok := l.NextToken()
-		if tok.Type != tt.expectedType {
+		if tok.Type != ts.expectedType {
 			t.Fatalf("tests[%d] - tokentype wrong. expected=%q, got=%q",
-				i, tt.expectedType, tok.Type)
+				i, ts.expectedType, tok.Type)
 		}
-		if tok.Literal != tt.expectedLiteral {
+		if tok.Literal != ts.expectedLiteral {
 			t.Fatalf("tests[%d] - literal wrong. expected=%q, got=%q",
-				i, tt.expectedLiteral, tok.Literal)
+				i, ts.expectedLiteral, tok.Literal)
 		}
 	}
 }
