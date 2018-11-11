@@ -17,12 +17,8 @@ const (
 	INT   = "INT"   // 12345
 
 	// Operators
-	ASSIGN  = "="
-	PLUS    = "+"
-	GET     = "get"
-	EXTRACT = "extract"
-	PARSE   = "parse"
-	ON      = "on"
+	//ASSIGN = "="
+	//PLUS   = "+"
 
 	// Delimiters
 	SEMICOLON = ";"
@@ -31,5 +27,9 @@ const (
 	RPAREN = ")"
 
 	// Keywords
-	xpath = "xpath"
+	xpath   = "xpath"
+	GET     = "get"
+	EXTRACT = "extract"
+	PARSE   = "parse"
+	ON      = "on"
 )
