@@ -27,9 +27,22 @@ const (
 	RPAREN = ")"
 
 	// Keywords
-	xpath   = "xpath"
+	XPATH   = "xpath"
 	GET     = "get"
 	EXTRACT = "extract"
-	PARSE   = "parse"
 	ON      = "on"
 )
+
+var keywords = map[string]TokenType{
+	"xpath":   XPATH,
+	"get":     GET,
+	"extract": EXTRACT,
+	"on":      ON,
+}
+
+func LookupType(ident string) TokenType {
+	if tok, ok := keywords[ident]; ok {
+		return tok
+	}
+	return IDENT
+}
