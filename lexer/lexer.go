@@ -32,6 +32,8 @@ func (l *Lexer) NextToken() token.Token {
 	l.skipWhitespce()
 
 	switch l.ch {
+	case '=':
+		tok = newToken(token.ASSIGN, l.ch)
 	case ';':
 		tok = newToken(token.SEMICOLON, l.ch)
 	case '(':
