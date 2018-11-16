@@ -32,12 +32,13 @@ func TestNextTokenOnlyWithDelimiters(t *testing.T) {
 	}
 }
 
-func TestNextTokenDelimitersAndKeywords(t *testing.T) {
-	input := "get extract on xpath() 1 ;"
+func TestNextTokenDelimitersKeywordsAndOperators(t *testing.T) {
+	input := "let get extract on xpath() 1 = ;"
 	tests := []struct {
 		expectedType    token.TokenType
 		expectedLiteral string
 	}{
+		{token.LET, "let"},
 		{token.GET, "get"},
 		{token.EXTRACT, "extract"},
 		{token.ON, "on"},
@@ -45,6 +46,7 @@ func TestNextTokenDelimitersAndKeywords(t *testing.T) {
 		{token.LPAREN, "("},
 		{token.RPAREN, ")"},
 		{token.INT, "1"},
+		{token.ASSIGN, "="},
 		{token.SEMICOLON, ";"},
 		{token.EOF, ""},
 	}
