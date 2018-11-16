@@ -1,3 +1,4 @@
+.PHONY: repl
 check:
 	go test ./...
 

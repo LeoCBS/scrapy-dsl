@@ -44,5 +44,5 @@ mode also can called to "console" mode or "interactive" mode.
 
 To interact with SDSL run this command:
 
-    go run main.go
+    make repl
 
