@@ -37,3 +37,12 @@ Output Example:
 
     make check
 
+## REPL
+
+Like other languages SDSL also have one REPL (Read, Eval, Print, Loop). This
+mode also can called to "console" mode or "interactive" mode.
+
+To interact with SDSL run this command:
+
+    go run main.go
+
