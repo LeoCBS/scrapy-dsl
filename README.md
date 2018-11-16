@@ -16,6 +16,7 @@ abstract python and scrapy knowledgement and provide one language more simple to
 
 
 2) 
+
     let firtBody = get('http://www.telelistas.net')
     let results = parser(firstBody){
         return append({"fone": xpath('/div[@id=telInfo]')})
