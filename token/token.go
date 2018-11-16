@@ -17,7 +17,7 @@ const (
 	INT   = "INT"   // 12345
 
 	// Operators
-	//ASSIGN = "="
+	ASSIGN = "="
 	//PLUS   = "+"
 
 	// Delimiters
@@ -27,13 +27,15 @@ const (
 	RPAREN = ")"
 
 	// Keywords
-	XPATH   = "xpath"
-	GET     = "get"
-	EXTRACT = "extract"
-	ON      = "on"
+	LET     = "LET"
+	XPATH   = "XPATH"
+	GET     = "GET"
+	EXTRACT = "EXTRACT"
+	ON      = "ON"
 )
 
 var keywords = map[string]TokenType{
+	"let":     LET,
 	"xpath":   XPATH,
 	"get":     GET,
 	"extract": EXTRACT,
