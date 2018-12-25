@@ -12,6 +12,10 @@
 
 package ast
 
+import (
+	"github.com/LeoCBS/scrapy-dsl/token"
+)
+
 type Node interface {
 	TokenLiteral() string
 }
@@ -33,8 +37,8 @@ type Program struct {
 }
 
 func (p *Program) TokenLiteral() string {
-	if len(p.Statement) > 0 {
-		return p.Statement[0].TokenLiteral()
+	if len(p.Statements) > 0 {
+		return p.Statements[0].TokenLiteral()
 	} else {
 		return ""
 	}

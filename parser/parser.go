@@ -1,4 +1,4 @@
-package main
+package parser
 
 import (
 	"github.com/LeoCBS/scrapy-dsl/ast"
@@ -9,11 +9,11 @@ import (
 type Parser struct {
 	l *lexer.Lexer
 
-	curToken  toke.Token
+	curToken  token.Token
 	peekToken token.Token
 }
 
-func New() *Parser {
+func New(l *lexer.Lexer) *Parser {
 
 	p := &Parser{l: l}
 
@@ -30,4 +30,5 @@ func (p *Parser) nextToken() {
 }
 
 func (p *Parser) ParseProgram() *ast.Program {
+	return nil
 }
